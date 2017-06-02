@@ -1,0 +1,25 @@
+@charset "utf-8";
+html,
+body { height: 100%; font-family: "Helvetica Neue",Helvetica,Arial,Tahoma,sans-serif;
+	background-color: #fff; }
+
+.paymentSuccessful-container { max-width: 360px; height: 100%; margin: 0 auto;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box; }
+
+.p-top { display: -webkit-flex; display: flex; justify-content: flex-start; align-items: center;
+	width: 100%; height: 60px; margin: 30px 0 60px; }
+.paymentSuccessful-icon { width: 60px; height: 100%; display: block; margin: 0 30px;
+	background: url(../../images/paymentSuccessful-icon.png) center center / auto 100% no-repeat; }
+.paymentSuccessful-word { font: 2em "微软雅黑"; }
+
+.p-bottom { display: -webkit-flex; display: flex; justify-content: space-around;
+	width: 100%; height: auto; }
+.p-btn { width: 100px; height: 40px; font: 1.2em "微软雅黑";
+	-webkit-border-radius: 5px;
+			border-radius: 5px; }
+
+.p-see-btn { border: 1px solid #ff9999; background-color: #ff9999; color: #fff; }
+.p-home-btn { border: 1px solid #ff9999; background-color: #fff; color: #ff9999; }
+
+.check-p { margin: 30px 0 0; text-align: center; }

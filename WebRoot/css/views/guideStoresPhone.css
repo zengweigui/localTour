@@ -1,0 +1,99 @@
+@charset "utf-8";
+.stores-container { max-width: 640px; height: auto; margin: 0 auto; padding-top: 50px; }
+
+/*店铺背景图*/
+.clip-area { position: relative; width: 100%; height: 160px; overflow: hidden;
+	text-align: center; color: #bbb; font: 1.1em/240px "微软雅黑";
+	background : #eee url(../../images/add.png) center center/60px 60px no-repeat; }
+.file { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+	filter:alpha(opacity:0); opacity: 0; }
+.change { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.change-img { width: 100%; height: 100%; z-index: -1; }
+/*无src隐藏 -- 因为未给src赋值时，会出现默认border；*/
+.change img[src='']{ visibility: hidden; }
+
+.ownername-box { display: -webkit-flex; display: flex; justify-content: center; align-items: center;
+	width: 100%; height: 50px; margin-bottom: 40px; }
+.ownername { height: 50px; padding: 0 2em; font: 1.5em/50px "微软雅黑"; color: #252525;
+	border-bottom: 1px solid #252525; }
+
+.ownerlist-box { display: -webkit-flex; display: flex; justify-content: space-around; width: 100%;
+	height: 100px; }
+.list-item { display: -webkit-flex; display: flex; flex-flow: column; align-items: center;
+	width: 80px; height: 100px; }
+.stores-icon { width: 100%; height: 80px; }
+.stores-product-icon { background: url(../../images/stores-product-icon.png) center center / 50% no-repeat; }
+.stores-order-icon { background: url(../../images/stores-order-icon.png) center center / 50% no-repeat; }
+.stores-wallet-icon { background: url(../../images/stores-wallet-icon.png) center center / 50% no-repeat; }
+.icon-desc { font: 1.2em "微软雅黑"; color: #252525; }
+
+#business-btn { display: block; width: 80%; height: 50px; margin: 30px auto 10px; line-height:50px;
+    border: none; text-align: center; font: 1.2em "微软雅黑"; border: 1px solid #252525;
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
+.start-business { background-color: #252525; color: #fff; }
+.in-business { background-color: #fff; color: #252525; }
+
+/* 顶部 */
+.return { display: -webkit-flex; display: flex; justify-content: center; align-items: center;
+    position: fixed; left: 0; top: 0; width: 100%; height: 50px; z-index: 1; font: 1.4em "微软雅黑";
+    border-bottom: 1px solid #ebebeb; background-color: #fff; }
+.return-icon { position: absolute; left: 5px; display: block; width: 50px; height: 50px;
+    background: #fff url(../../images/return-icon.png) left center no-repeat; }
+.authentication-box { position: absolute; left: 4px; width: 40px; height: 50px;
+    background: url(../../images/authentication-icon.png) center center / 30px 30px no-repeat; }
+
+/*裁剪框*/
+.showEdit { display: none; width:100%; height: 100%; position: absolute; top:0; left: 0; z-index: 9; }
+.showEdit-btn { width: 100%; position: absolute; top: 10px; left: 0px; }
+.cancleBtn { margin-left: 10px; }
+.confirmBtn { float: right; margin-right: 10px; }
+.report img { background: #000; width: 300px; height: 300px; }
+
+@media screen
+and (min-width : 321px)
+and (max-width : 371px) {
+	.clip-area { height: 180px; }
+	.clip-area {  line-height: 280px; }
+}
+
+@media screen
+and (min-width : 371px)
+and (max-width : 421px) {
+	.clip-area { height: 198px; }
+	.clip-area {  line-height: 298px; }
+}
+
+@media screen
+and (min-width : 421px)
+and (max-width : 471px) {
+	.clip-area { height: 225px; }
+	.clip-area {  line-height: 325px; }
+}
+
+@media screen
+and (min-width : 471px)
+and (max-width : 521px) {
+	.clip-area { height: 250px; }
+	.clip-area {  line-height: 350px; }
+}
+
+@media screen
+and (min-width : 521px)
+and (max-width : 571px) {
+	.clip-area { height: 275px; }
+	.clip-area {  line-height: 375px; }
+}
+
+@media screen
+and (min-width : 571px)
+and (max-width : 621px) {
+	.clip-area { height: 300px; }
+	.clip-area {  line-height: 400px; }
+}
+
+@media screen
+and (min-width : 621px) {
+	.clip-area { height: 320px; }
+	.clip-area {  line-height: 420px; }
+}

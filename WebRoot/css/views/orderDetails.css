@@ -1,0 +1,43 @@
+@charset "utf-8";
+.detail_container { max-width: 640px; margin: 0 auto; padding: 10px 0 0; }
+
+.order-title { width: 100%; height: 40px; font: 1.1em/40px "微软雅黑"; background-color: #e8e8e8;
+	color: #999; text-indent: 1em; }
+
+.guide-box { position: relative; width: 100%; height: 60px; border-bottom: 1px solid #ebebeb;
+	background: #fff url(../../images/right.png) no-repeat 96% center/0.8em; }
+.guide-head { position: absolute; left: 1em; top: 50%; margin-top: -23px; width: 46px; height: 46px;
+	overflow: hidden;
+	-webkit-border-radius: 50%;
+			border-radius: 50%; }
+.guide-head img { width: 100%; height: 100%; }
+.guide-name { margin-left: 5.8em; font: 1.1em/60px "微软雅黑"; color: #666; }
+
+.product-box { position: relative; width: 100%; height: 50px; border-bottom: 1px solid #ebebeb;
+	line-height: 50px; cursor: pointer;
+	background: #fff url(../../images/right.png) no-repeat 96% center/0.8em; }
+.product-name { position: absolute; left: 1em; width: 12em; font: 1.1em/50px "微软雅黑";
+	overflow: hidden; white-space: nowrap; text-overflow: ellipsis;/*文字超出用省略号显示*/ }
+.product-number { position: absolute; left: 15em; font: 1.1em/50px "微软雅黑"; color: #666; }
+.product-price { position: absolute; right: 3em; font: 1.1em/50px "微软雅黑"; color: #ff5353; }
+
+/* .guide-number-box { width: 100%; height: 41px; border-bottom: 1px solid #ebebeb;
+	text-indent: 1em; font: 1.1em/40px "微软雅黑"; } */
+
+.reserve-box { width: 100%; height: 81px; text-indent: 1em; font: 1.1em/40px "微软雅黑"; }
+.reserve-name { width: 100%; height: 40px; border-bottom: 1px solid #ebebeb; }
+.reserve-phone { width: 100%; height: 40px; }
+
+.order-box { width: 100%; height: 81px; text-indent: 1em; font: 1.1em/40px "微软雅黑"; }
+.order-number { width: 100%; height: 40px; border-bottom: 1px solid #ebebeb; }
+.order-time { width: 100%; height: 40px; border-bottom: 1px solid #ebebeb; }
+
+a { color: #6666cc; }
+a:hover { text-decoration: none; }
+
+/* 顶部 */
+.return { display: -webkit-flex; display: flex; justify-content: center; align-items: center;
+    position: relative; left: 0; top: 0; width: 100%; height: 50px; z-index: 1; font: 1.4em "微软雅黑";
+    border-bottom: 1px solid #ebebeb; background-color: #fff; }
+.return-icon { position: absolute; left: 5px; top: 0; display: block; width: 50px; height: 50px; cursor: pointer;
+    background: #fff url(../../images/return-icon.png) left center no-repeat; }

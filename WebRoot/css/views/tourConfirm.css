@@ -1,0 +1,110 @@
+@charset "utf-8";
+html{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body{ font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    line-height: 1.5; font-size: 14px; word-break: break-all; }
+.fl { float: left; }
+.fr { float: right; }
+/* 清除浮动 clearfix */
+.clearfix:before, .clearfix:after { content:""; display:table; }
+.clearfix:after { clear: both; overflow: hidden; }
+.clearfix { zoom:1; }
+
+/*nav导航栏*/
+.nav { position: relative; min-width: 1000px; height: 60px; line-height: 60px; border-bottom: 1px solid #ebebeb;
+	padding-left: calc(100vw-100%); background-color: rgba(255,255,255,1); }
+.list-box { float: left; width: 780px; height: 60px; margin-right: 40px; text-align: center;}
+.list-box ul { overflow: hidden; }
+.list-box ul li { float: left; display: block; width: 80px; height: 100%; margin-left: 30px; }
+.list-box ul li a { background-color: #fff; display: block; width: 80px; height: 58px; color: #000;
+	            font-size: 18px; padding: 0 6px; border-bottom: 2px solid #fff; }
+.nav a.active { border-bottom: 2px solid #ff5741; color: #ff5741; }
+.list-box ul li a:hover { border-bottom: 2px solid #ff5741; color: #ff5741; }
+/*登录注册*/
+.login-out { height: 100%; margin-right: 100px; float: right; font: 1em/60px "微软雅黑";
+	color: #c9c9c9; text-align: right; display: none; }
+.login-out a { background-color: transparent; text-decoration: none; color: #ff5741;
+	cursor: pointer; }
+.login-out a:hover { text-decoration: underline; }
+.split { display: inline-block; margin: 0 10px; width: 1px; height: 14px; background-color: #c9c9c9;
+	overflow: hidden; vertical-align: -2px; *vertical-align: middle; }
+/*用户头像*/
+.user-box { position: relative; height: 100%; margin-right: 100px; float: right; display: none; }
+.user-avatar { width: 40px; height: 40px; margin: 10px 0; display: inline-block;
+	border: 1px solid #ff5741; overflow: hidden; cursor: pointer;
+	-webkit-border-radius: 50%; -moz-border-radius: 50%;
+    	-ms-border-radius: 50%;   -o-border-radius: 50%;
+    		border-radius: 50%; }
+.user-avatar img { width: 100%; height: 100%; }
+/**/
+.user-list { position: absolute; left: -30px; top: 62px; width: 100px; padding: 5px 0;
+	background-color: #252525; z-index: 999; display: none;
+	-webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
+	-ms-box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
+	box-shadow: 0 3px 12px rgba(0, 0, 0, .25); }
+.user-list::before { content: ""; position: absolute; top: -10px; left: 50%; width: 0; height: 0;
+	margin-left: -10px; border-left: 10px solid transparent;
+    border-right: 10px solid transparent; border-bottom: 10px solid #252525; }
+.user-list ul { line-height: 0; text-align: center; }
+.user-list ul li { border-bottom: 1px solid #353535; }
+.user-list ul li:last-child { border-bottom: none; }
+.user-list ul li a { display: block; line-height: 30px; color: #fff; }
+.user-list ul li a:hover { background-color: #353535; }
+
+.tourConfirm-container { max-width: 640px; height: 100%; margin: 30px auto 0;
+	border: 1px solid #ebebeb; }
+@font-face{
+    font-family: 'iconfont';
+    src: url('../../fonts/iconfont.eot'); /* IE9*/
+    src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/iconfont.woff') format('woff'), /* chrome��firefox */
+    url('../../fonts/iconfont.ttf') format('truetype'), /* chrome��firefox��opera��Safari, Android, iOS 4.2+*/
+    url('../../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;/*防止字体图标在pc端的chrome浏览器下出现严重的锯齿；*/
+    -moz-osx-font-smoothing: grayscale;
+}
+.package-title { background-color: #efefef; height: 40px; font: 1.2em/40px '黑体'; color: #ff5741; }
+.package-title i { margin: 0 1em; }
+.package-name { color: #504f4f; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; /*文字超出用省略号显示*/ }
+.package-name,
+.package-time { height: 40px; font: 1.2em/40px '黑体'; color: #504f4f; text-indent: 1em; border-bottom: 1px solid #ebebeb; }
+.package-time { cursor: pointer;
+    background: #fff url(../../images/right.png) 95% center / 12px 20px no-repeat; }
+/*时间选择弹出*/
+.pop-package-time { position: fixed; left: 100%; top: 0; width: 100%; height: 100%; background-color: #fff;
+    z-index: 9; background-color: #f2f2f2; overflow: scroll;
+    -webkit-opacity: 0; opacity: 0; filter: alpha(opacity=0);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+.select-time-box { position: relative; top: 0; left: 0; width: 100%; height: 50px;
+    text-align: center; font: 1.4em/50px "微软雅黑"; z-index: 1;
+    background-color: #fff; }
+.select-time-return { position: absolute; left: 5px; display: block; width: 50px; height: 50px;
+    cursor: pointer; background: #fff url(../../images/return-icon.png) left center no-repeat; }
+
+input[type="text"],
+input[type="number"] { width: 100%; height: 100%; border-bottom: 1px solid #ebebeb;
+    padding: 0.8em 1em; margin: 0; font: 1em "微软雅黑"; color: #000;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+.package-total { height: 100px; text-align: center; font: 1.2em "微软雅黑"; padding: 20px 0; }
+.package-price { font-size: 1.8em; color: #ff5741; }
+.purchase-box { margin: 10px 0; }
+.purchase-box i { font-size: 2.8em; color: #ff5741; cursor: pointer; }
+.purchase-box p { display: inline-block; margin: 0 1em; }
+.purchase-box p span { color: #ff5741; font-size: 2em; margin: 0 5px; }
+
+.purchase { width: 640px; height: 50px; margin: 30px auto 0; display: block;
+    text-align: center; background-color: #ff5741; color: #fff; font: 1.3em/50px "微软雅黑"; }
+.purchase:active { background-color: #ff5353; }
+
+.ui-datepicker,.ui-datepicker table,.ui-datepicker tbody,.ui-datepicker td,.ui-datepicker th,.ui-datepicker thead,.ui-datepicker tr{margin:0;padding:0;border:none;border-spacing:0;text-align:center}#calendar{width:100%;height:400px;margin:0;padding:0}.ui-datepicker{display:none;width:100%;height:auto;padding:10px;cursor:default;text-transform:uppercase;font-family:Tahoma;font-size:1em;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}.ui-datepicker-inline{width:100%;height:auto;-webkit-box-sizing:border-box;box-sizing:border-box}.ui-datepicker-header{position:relative;padding-bottom:10px;border-bottom:1px solid #d8d8d8;font:1.3em "微软雅黑"}.ui-datepicker-title{text-align:center}.ui-datepicker-month{position:relative;padding-right:15px;color:#555}.ui-datepicker-month:before{display:block;position:absolute;top:5px;right:0;width:5px;height:5px;content:'';background:#555;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}.ui-datepicker-year{padding-left:8px;color:#555}.ui-datepicker-next,.ui-datepicker-prev{position:absolute;top:-2px;padding:5px;cursor:pointer}.ui-datepicker-prev{left:0;padding-left:0}.ui-datepicker-next{right:0;padding-right:0}.ui-datepicker-next span,.ui-datepicker-prev span{display:block;width:4em;height:1em;font:14px "微软雅黑";color:#000}.ui-datepicker-calendar{width:100%;height:300px}.ui-datepicker-calendar th{padding-top:15px;padding-bottom:10px;text-align:center;font:12px "微软雅黑";color:#000}.ui-datepicker-calendar td{text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box}.ui-datepicker-unselectable .ui-state-default{color:#999!important}.ui-datepicker-calendar .ui-state-default{display:block;width:100%;height:100%;outline:0;vertical-align:middle;line-height:49px;text-decoration:none;color:#000;border:1px solid transparent;text-align:center}.ui-datepicker-calendar .ui-state-active{color:#ff5741;border-color:#ff5741}.ui-datepicker-other-month .ui-state-default{color:#999;width:100%;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box}

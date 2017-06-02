@@ -1,0 +1,41 @@
+@charset "utf-8";
+.fillin-container { max-width: 640px; height: 100%; margin: 0 auto; }
+
+.edit-box { position: relative; margin: 80px auto 10px; width: 120px; height: 120px; border: 1px solid #dbdbdb;
+	-webkit-border-radius: 100%;
+            border-radius: 100%; overflow: hidden; }
+input { border: none; }
+.file { width: 100%; height: 100%; filter:alpha(opacity:0); opacity: 0; }
+.camera { position: absolute; width: 50px; height: 50px; left: 50%; top: 50%;
+	margin-left: -25px; margin-top: -25px; z-index: -1; }
+.changeAvatar-img { position: absolute; width: 100%; height: 100%; left: 50%; top: 50%;
+	margin-left: -60px; margin-top: -60px; z-index: -1; }
+
+.edit-desc { text-align: center; font: 1.2em "微软雅黑"; color: #999; }
+.nickname { display: block; margin: 30px auto 50px; width: 70%; text-align: center; padding: 10px 0;
+	font: 1.2em "黑体"; border-bottom: 1px solid #cbcbcb;
+	-webkit-transition: all .3s;
+			transition: all .3s;}
+.nickname:focus { border-bottom: 1px solid #138250; }
+.open-btn { display: block; margin: 0 auto; width: 70%; padding: 14px 0; background-color: #138250; color: #fff;
+	border: 1px solid #138250; font: 1.2em "微软雅黑";
+	-webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-transition: all .2s;
+			transition: all .2s; }
+.open-btn:active { background-color: #13895f; border: 1px solid #13895f; }
+
+/*裁剪框*/
+#showEdit { display: none; max-width: 640px; height: 100%; position: fixed; top: 50%; left: 50%;
+	-webkit-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+	z-index: 9; }
+.showEdit-btn { width: 100%; position: absolute; top: 10px; left: 0px; }
+#cancleBtn { margin-left: 10px; }
+#confirmBtn { float: right; margin-right: 10px; }
+#report img { background: #000; }
+
+
+.return { position: fixed; left: 0; right: 0; top: 0; width: 100%; height: 50px; text-align: center;
+    font: 1.3em/50px "微软雅黑"; color: #504f4f; border-bottom: 1px solid #ebebeb;
+    background-color: #fff; }

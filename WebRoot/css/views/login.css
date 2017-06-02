@@ -1,0 +1,105 @@
+@charset "utf-8";
+html,body{ width: 100%; height: 100%; background-color: #f7f8f9; }
+html{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body{ font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    line-height: 1.5; font-size: 14px; word-break: break-all; }
+
+.loginContainer { display: -webkit-flex; display: flex; justify-content: center; align-items: center;
+    position: relative; height: 100%; white-space: nowrap; text-align: center; }
+.login { position: relative; width: 360px; display: inline-block;
+  vertical-align: middle; z-index: 1; }
+
+.login-title h4 { text-align: center; font-size: 18px; color: #fff; font-weight: 500; }
+
+.login-content { margin-top: 32px; }
+
+.login-form { border-radius: 4px; padding: 2px 0; }
+
+.login-row { position: relative; height: 60px; padding: 0px 20px;
+    border-bottom: 1px solid #fff; font-size: 16px; line-height: 60px; }
+
+.login-input { width: 100%; height: 60px; line-height: 16px; border: 0;
+    padding: 0px; color: #fff; background-color: transparent; }
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ddd; font: 1em "微软雅黑"; } 
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ddd; font: 1em "微软雅黑"; }
+/*去掉 input type="number" 右边图标*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {  -webkit-appearance: none !important; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #252525 inset;
+    color: #fff!important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)!important;
+}
+
+.login-btn { width: 100%; padding: 0; line-height: 50px; font-size: 18px;
+    margin-top: 50px; border: 1px solid #138250; color: #138250; border-radius: 4px;
+    font-weight: 500; display: inline-block; text-align: center; vertical-align: middle; }
+.login-btn:hover { text-decoration: none; }
+
+.login-tip { text-align: center; margin-top: 16px; }
+.login-lr { line-height: 1; color: #000; font-size: 12px; }
+
+.login-tip a { color: #fff; font-size: 12px; display: block; }
+
+.fl { float: left; }
+.fr { float: right; }
+
+.radio-row { display: -webkit-flex; display: flex; justify-content: space-around; align-items: center;
+  height: 60px; }
+.radio-row label { display: -webkit-flex; display: flex; justify-content: center; align-items: center;
+ height: 100%; width: 50%; color: #fff; font: 0.9em "微软雅黑"; }
+.option-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0;
+    background: #fff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    margin-right: 0.5rem;
+    z-index: 1;
+}
+
+.option-input:checked {
+    background: #138250;
+}
+.option-input:checked::before {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    content: '\2714';
+    display: inline-block;
+    font-size: 22px;
+    text-align: center;
+    line-height: 26px;
+}
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #138250;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.option-input.radio {
+    border-radius: 50%;
+}
+.option-input.radio::after {
+    border-radius: 50%;
+}
+
+canvas{ display: inline-block; vertical-align: bottom; }
+/* ---- particles.js container ---- */
+#particles-js{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  background-color: #252525; background-size: cover;
+  background-position: 50% 50%; background-repeat: no-repeat; }
